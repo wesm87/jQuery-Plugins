@@ -1,0 +1,33 @@
+{
+	"name": "jQuery-Plugins",
+	"version": "1.0.0",
+	"description": "A collection of custom jQuery plugins I've written over the years ",
+	"devDependencies": {
+		"coffee-script": "^1.10.0",
+		"gulp": "github:gulpjs/gulp#4.0",
+		"gulp-coffee": "^2.3.1",
+		"gulp-rename": "^1.2.2",
+		"gulp-sourcemaps": "^1.6.0",
+		"gulp-strip-debug": "^1.1.0",
+		"gulp-uglify": "^1.5.1"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wesm87/jQuery-Plugins.git"
+	},
+	"keywords": [
+		"jQuery",
+		"Plugins",
+		"Wes",
+		"Moberly"
+	],
+	"author": "Wes Moberly <wesm87@gmail.com>",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/wesm87/jQuery-Plugins/issues?state=open"
+	},
+	"homepage": "https://github.com/wesm87/jQuery-Plugins"
+}
