@@ -4,6 +4,7 @@ rename       = require 'gulp-rename'
 sourcemaps   = require 'gulp-sourcemaps'
 uglify       = require 'gulp-uglify'
 coffee       = require 'gulp-coffee'
+coffeelint   = require 'gulp-coffeelint'
 stripDebug   = require 'gulp-strip-debug'
 
 class GulpTasks
@@ -29,10 +30,19 @@ class GulpTasks
 			.pipe sourcemaps.write( './maps' )
 			.pipe gulp.dest( @paths.coffee.dest )
 
+	coffeelint: =>
+
+		gulp
+			.src  @paths.coffee.source
+			.pipe coffeelint()
+			.pipe coffeelint.reporter( 'coffeelint-stylish' )
+
 tasks = new GulpTasks
 
-# CoffeeScript task.
+
+# CoffeeScript tasks
 gulp.task 'coffee', tasks.coffee
+gulp.task 'lint', tasks.coffeelint
 
 # Rebuild a file changes
 gulp.task 'watch', tasks.watch
